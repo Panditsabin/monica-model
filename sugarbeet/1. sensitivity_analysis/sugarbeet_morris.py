@@ -35,7 +35,7 @@ def map_parameters(x, param_names, set_name):
 
 
                 
-# change parameters values/ update parameter files
+# update parameter files
 def update_parameter_files(param_update, parameter_dir, project_dir, cultivar_file, species_file,  crop_general_file, sim_file, sim_start, sim_end):
     """Updates parameter files based on generated parameter sets."""
     
@@ -62,7 +62,7 @@ def update_parameter_files(param_update, parameter_dir, project_dir, cultivar_fi
             with open(file_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
     
-            # 1. Update UserCropParameters
+            # 1. Update Usercropparameters
             if parameter_file == "UserCropParameters":
                 scalar_keys = [
                     "CanopyReflectionCoefficient", "GrowthRespirationParameter1", "GrowthRespirationParameter2",
@@ -73,7 +73,7 @@ def update_parameter_files(param_update, parameter_dir, project_dir, cultivar_fi
                     if param in updates:
                         data[param] = updates[param]            
     
-            # 2. Update SpeciesParameters
+            # 2. Update Speciesparameters
             elif parameter_file == "SpeciesParameters":
                 # Scalar parameters
                 scalar_keys_species = [
@@ -95,7 +95,7 @@ def update_parameter_files(param_update, parameter_dir, project_dir, cultivar_fi
                             if idx < len(data[param]):
                                 data[param][idx] = value
     
-            # 3. Update CultivarParameters
+            # 3. Update Cultivarparameters
             elif parameter_file == "CultivarParameters":
                 # Partitioning and Senescence
                 senescence_map = {
@@ -151,7 +151,7 @@ def update_parameter_files(param_update, parameter_dir, project_dir, cultivar_fi
                             if idx < len(target_list):
                                 target_list[idx] = val
 
-            # 4. Simulation Parameters Update
+            # 4. Simulation Parameters
             elif parameter_file == "Simulation":
                 if "threshold" in updates:
                     data["AutoIrrigationParams"]["trigger_if_nFC_below_%"][0] = int(updates["threshold"])
@@ -403,4 +403,5 @@ def extract_irr_data(sim_out_csv):
     irr_df["Date"] = pd.to_datetime(irr_df['Date'])
     irr_data = irr_df.groupby(irr_df['Date'].dt.year)['Irrig [mm]'].sum().reset_index()
     irr_data.columns = ['Year', 'sim_irr']
+
     return irr_data
