@@ -1,11 +1,11 @@
-# 🧬 Morris Sensitivity Analysis (SA) for Sugar Beet
+# Morris Sensitivity Analysis (SA) for Sugar Beet
 ### MONICA Agro-Ecosystem Model Integration
  
 > An automated workflow to perform **Global Sensitivity Analysis** using the **Morris Method (Elementary Effects)**. This analysis quantifies the impact of crop parameters on **Yield**, **Irrigation**, and **Soil Moisture** under optimal growing conditions.
  
 ---
  
-## 📂 Project Structure
+## Project Structure
  
 | File | Type | Description |
 |------|------|-------------|
@@ -15,7 +15,7 @@
  
 ---
  
-## 🔄 The Workflow
+## The Workflow
  
 The analysis is structured into **three distinct phases**:
  
@@ -87,7 +87,7 @@ parameter_dir = "path/to/json/params/"     # Location of the base MONICA .json p
  
 ---
  
-## 📊 Output Interpretation
+## Output Interpretation
  
 Use the Morris plots to classify parameters.
  
