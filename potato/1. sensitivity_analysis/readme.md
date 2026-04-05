@@ -1,7 +1,7 @@
 # Morris Sensitivity Analysis — Potato
 ### MONICA Agro-Ecosystem Model Integration
  
-> An automated workflow to perform **Global Sensitivity Analysis** using the **Morris Method (Elementary Effects)**. This analysis quantifies the impact of crop parameters on **Yield**, **Irrigation**, and **Soil Moisture** under optimal growing conditions.
+> An automated workflow to perform **Global Sensitivity Analysis** using the **Morris Method (Elementary Effects)**. This analysis quantifies the impact of crop parameters on **Yield**, **Irrigation**, and **Soil Moisture** under optimal/ reduced growing conditions.
  
 ## Project Structure
  
