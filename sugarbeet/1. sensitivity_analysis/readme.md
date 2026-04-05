@@ -3,8 +3,6 @@
  
 > An automated workflow to perform **Global Sensitivity Analysis** using the **Morris Method (Elementary Effects)**. This analysis quantifies the impact of crop parameters on **Yield**, **Irrigation**, and **Soil Moisture** under optimal growing conditions.
  
----
- 
 ## Project Structure
  
 | File | Type | Description |
@@ -13,28 +11,24 @@
 | `morris_run_sb_sa.py`| The execution script. Automates the simulation loop for the Morris trajectories |
 | `morris_sa_sugarbeet_optimal_condn.ipynb` | For Parameter Generation, Objective Function Calculation, and Statistical Analysis |
  
----
  
 ## The Workflow
  
-The analysis is structured into **three distinct phases**:
+The analysis is structured into **three phases**:
  
----
  
 ### Phase 1 — Pre-Processing (Parameter Sampling)
  
-**Module:** `morris_sa_sugarbeet_optimal_condn.ipynb`
+**Module:** `morris_sa_sugarbeet_.ipynb`
  
 - Defines the **"Problem"** — parameter names and their min/max ranges
 - Uses the **SALib** library to generate an optimized Morris trajectory set
  
 **Output:** `sugarbeet_morris.xlsx` — the input file for the simulation runner
  
----
- 
 ### Phase 2 — Automated Simulation
  
-**Module:** `morris_run_sb_sa.py`
+**Module:** `sugarbeet_morris_multiprocess.py`
  
 **Steps executed automatically:**
  
@@ -45,14 +39,12 @@ The analysis is structured into **three distinct phases**:
  
 **Output:** Consolidated `.txt` result files ready for post-processing
  
----
- 
 ### Phase 3 — Post-Processing & Sensitivity Analysis
  
-**Module:** `morris_sa_sugarbeet_optimal_condn.ipynb`
+**Module:** `morris_run_sugarbeet_multiprocess.ipynb`
  
 #### Objective Functions
-Sensitivity is calculated not just on raw outputs, but on **error metrics** comparing simulation vs. observation:
+Sensitivity is calculated on **error metrics** comparing simulation vs. observation:
  
 | Metric | Description |
 |--------|-------------|
@@ -72,9 +64,6 @@ Sensitivity is calculated not just on raw outputs, but on **error metrics** comp
 - **Covariance Plots** — Identify sensitive parameters based on Elementary Effects (EE)
 - **Yearly SI Boxplots** — Analyse how parameter sensitivity fluctuates across growing seasons (2009–2020)
  
----
-
- 
 ### Setting Up Paths
  
 Configure the following variables in `morris_run_sb_sa.py` before running:
@@ -84,8 +73,6 @@ monica_exe    = "path/to/monica-run.exe"   # Path to your MONICA binary
 project_dir   = "path/to/project/"         # Working directory for simulation outputs
 parameter_dir = "path/to/json/params/"     # Location of the base MONICA .json parameter files
 ```
- 
----
  
 ## Output Interpretation
  
