@@ -223,8 +223,8 @@ def site_json(base_path, project_dir, set_name, run_name):
         "SiteParameters": {
             "Latitude": 52.5333333,
             "Slope": 0,
-            "HeightNN": [5, "m"],
-            "NDeposition": [30, "kg N ha-1 y-1"],
+            "HeightNN": [65, "m"],
+            "NDeposition": [5, "kg N ha-1 y-1"],
             "SoilProfileParameters": soil_profile
         },
         "SoilTemperatureParameters": ["include-from-file", general_prefix + "soil-temperature.json"],
