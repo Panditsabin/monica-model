@@ -55,7 +55,7 @@ Simultaneous calibration against three objectives using NSGA-II.
 | `2. optimization_run_sb.py` | Defines the NSGA-II problem class with 3 objectives and runs the optimization |
 | `3. post_process_sb.py` | Pareto front visualization, hypervolume, running metric and parameter convergence |
 | `4. monica_run_postprocess_sb.py` | Runs MONICA for a given Pareto solution under both conditions over the full simulation period |
-| `5. pareto_ensemble_sb.py` | Runs all Pareto-optimal solutions through MONICA and plots the ensemble spread (10–90% band) of yield and irrigation against observations |
+| `5. pareto_front_solution_sb.py` | Runs all Pareto-optimal solutions through MONICA and plots the ensemble spread (10–90% band) of yield and irrigation against observations |
  
 ### NSGA-II Settings
  
