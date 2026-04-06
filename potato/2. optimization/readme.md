@@ -30,8 +30,9 @@ Single-objective calibration minimizing yield RMSE across both management condit
  
 | Setting | Value |
 |---------|-------|
-| `sim_start` | 2006-01-01 |
-| `sim_end` | 2019-12-31 |
+| `sim_start` (calibration) | 2006-01-01 |
+| `sim_end` (calibration) | 2015-12-31 |
+| `sim_end` (full period) | 2019-12-31 |
 | `excluded_years` | [2016] |
  
 ## Multi-Objective Optimization
@@ -54,7 +55,7 @@ Simultaneous calibration against three objectives using NSGA-II.
 | `2. optimization_run_mep.py` | Defines the NSGA-II problem class with 3 objectives and runs the optimization |
 | `3. post_process_mep.py` | Pareto front visualization, hypervolume, running metric and parameter convergence |
 | `4. monica_run_postprocess_mep.py` | Runs MONICA for a given Pareto solution under both conditions |
-| `5. pareto_ensemble_mep.py` | Runs all Pareto-optimal solutions through MONICA and plots the ensemble spread (10–90% band) of yield and irrigation against observations |
+| `5. pareto_front_solution_mep.py` | Runs all Pareto-optimal solutions through MONICA and plots the ensemble spread (10–90% band) of yield and irrigation against observations |
  
 ### NSGA-II Settings
  
