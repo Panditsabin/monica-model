@@ -51,11 +51,11 @@ Simultaneous calibration against three objectives using NSGA-II.
  
 | File | Description |
 |------|-------------|
-| `1. monica_run_ww.py` | Core library — parameter mapping, JSON file updates, MONICA runner and three-objective function |
-| `2. optimization_run_ww.py` | Defines the NSGA-II problem class with 3 objectives and runs the optimization |
-| `3. post_process_ww.py` | Pareto front visualization, hypervolume, running metric and parameter convergence |
-| `4. monica_run_postprocess_ww.py` | Runs MONICA for a given Pareto solution under both conditions over the full simulation period |
-| `5. pareto_ensemble_ww.py` | Runs all Pareto-optimal solutions through MONICA and plots the ensemble spread (10–90% band) of yield and irrigation against observations |
+| `1. monica_run.py` | Core library — parameter mapping, JSON file updates, MONICA runner and three-objective function |
+| `2. optimization_run.py` | Defines the NSGA-II problem class with 3 objectives and runs the optimization |
+| `3. post_process.py` | Pareto front visualization, hypervolume, running metric and parameter convergence |
+| `4. monica_run_postprocess.py` | Runs MONICA for a given Pareto solution under both conditions over the full simulation period |
+| `5. pareto_front_solution.py` | Runs all Pareto-optimal solutions through MONICA and plots the ensemble spread (10–90% band) of yield and irrigation against observations |
  
 ### NSGA-II Settings
  
